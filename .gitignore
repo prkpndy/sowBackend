@@ -1,0 +1,16 @@
+# virtual environment
+venv
+
+# binaries
+*.pyc
+__pycache__
+
+# IDE
+.vscode
+.idea
+
+# logs
+logfile
+
+# environment
+.env
