@@ -3,6 +3,7 @@
 from django.db import migrations
 
 terms = [
+  {'key': 'terms', 'value': 'Terms'},
   {'key': 'terms_text_1', 'value': 'BY clicking on Invoicing Now you choose to download according to the information you have entered and the text on the download page and the terms here, and at the same time accept the terms here.'},
   {'key': 'terms_text_2', 'value': 'You can use the program FREE for 14 days.'},
   {'key': 'terms_text_3', 'value': 'LettFaktura is so easy and self-explanatory that the chance that you will end up needing support is minimal, but if you should need support, we are here for you, with our office staffed most of the day. After the trial period, the subscription continues and costs NOK 99, for example. VAT per month, which is invoiced annually. If you do not wish to keep the program, simply cancel the trial period by notifying us within 14 days of downloading.'},
@@ -40,9 +41,10 @@ uss = [
 navigations = [
   {'key': 'home', 'name': "Home", 'link': '/home'},
   {'key':'order', 'name': "Order", 'link': '/order'},
-  {'key':'our_customer', 'name': "Our Customer", 'link': '/our_customer'},
+  {'key':'our_customer', 'name': "Our Customers", 'link': '/our_customer'},
   {'key':'about_us', 'name': "About Us", 'link': '/about_us'},
   {'key':'contact_us', 'name': "Contact Us", 'link': '/contact_us'},
+  {'key': 'logo', 'name': 'Logo', 'link': 'https://storage.123fakturere.no/public/icons/diamond.png'}
 ]
 
 pricelists = [
@@ -76,6 +78,9 @@ pricelists = [
   {'key': 'ordinary_mode', 'value': "Ordinary Mode"},
   {'key': 'advanced_mode_unit', 'value': "Advanced Mode - Unit"},
   {'key': 'advanced_mode_full', 'value': "Advanced Mode - Full"},
+  {'key': 'user_name', 'value': 'Prakhar Pandey'},
+  {'key': 'user_address', 'value': 'New Delhi'},
+  {'key': 'user_profile_pic', 'value': 'https://storage.123fakturere.no/public/icons/diamond.png'}
 ]
 
 def populateTables(apps, schema_editor):
