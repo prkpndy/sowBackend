@@ -43,10 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'language.apps.LanguageConfig',
-    'pricelist.apps.PricelistConfig'
+    'pricelist.apps.PricelistConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -76,6 +78,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sow.wsgi.application'
 
+# Handling CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000/",
+    "http://127.0.0.1:3000/",
+]
+
+CORS_ALLOW_METHODS = ("GET", "PUT")
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
