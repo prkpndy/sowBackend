@@ -28,15 +28,16 @@ priceListItems = [
 def populateTables(apps, schema_editor):
   PriceListItems = apps.get_model('pricelist', 'PriceListItems')
 
-  for pli in priceListItems:
-    p = PriceListItems(article_number=pli['article_number'],
-                       name=pli['name'],
-                       in_price=pli['in_price'],
-                       price=pli['price'],
-                       in_stock=pli['in_stock'],
-                       unit=pli['unit'],
-                       description=pli['description'])
-    p.save()
+  for _ in range(10):
+    for pli in priceListItems:
+      p = PriceListItems(article_number=pli['article_number'],
+                        name=pli['name'],
+                        in_price=pli['in_price'],
+                        price=pli['price'],
+                        in_stock=pli['in_stock'],
+                        unit=pli['unit'],
+                        description=pli['description'])
+      p.save()
 
 class Migration(migrations.Migration):
   dependencies = [

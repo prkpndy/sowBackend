@@ -6,7 +6,7 @@ def index(request):
   return HttpResponse("Hello person! This is the index of pricelist api")
 
 def pricelist(request, offset):
-  itemList = list(PriceListItems.objects.order_by('article_number').values())[offset:(offset+2)]
+  itemList = list(PriceListItems.objects.order_by('article_number').values())
   data = {'data': itemList}
 
   response = JsonResponse(data)
